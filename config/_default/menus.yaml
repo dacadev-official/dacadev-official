@@ -1,0 +1,10 @@
+main:
+- name: Blog
+  pageRef: /
+  weight: 10
+- name: Portafolio
+  pageRef: /portafolio
+  weight: 10
+- name: Sobre Mí
+  pageRef: /sobre-mi
+  weight: 10
