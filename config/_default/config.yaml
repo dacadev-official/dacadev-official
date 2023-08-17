@@ -1,0 +1,4 @@
+baseURL: 'http://dacacode.com/'
+languageCode: 'es-co'
+title: 'DacaCode </>'
+theme: "seogram"

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+{{- partial "head.html" . -}}
+
+<body>
+  <div class="back-to-top"></div>
+
+  {{- partial "header.html" . -}}
+
+  {{- block "main" . }}{{- end }}
+
+  {{- partial "footer.html" . -}}
+
+  {{- partial "scripts.html" . -}}
+</body>
+
+</html>
