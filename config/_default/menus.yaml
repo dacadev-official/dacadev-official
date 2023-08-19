@@ -1,6 +1,6 @@
 main:
 - name: Blog
-  pageRef: /
+  pageRef: /blog
   weight: 10
 - name: Portafolio
   pageRef: /portafolio
