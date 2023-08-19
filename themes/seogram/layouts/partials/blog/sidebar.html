@@ -1,0 +1,71 @@
+<div class="col-lg-4">
+  <div class="widget">
+    <!-- Widget search -->
+    <div class="widget-box">
+      <form action="#" class="search-widget">
+        <input type="text" class="form-control" placeholder="Enter keyword..">
+        <button type="submit" class="btn btn-primary btn-block">Search</button>
+      </form>
+    </div>
+
+    <!-- Widget Categories -->
+    <div class="widget-box">
+      <h4 class="widget-title">Categorias</h4>
+      <div class="divider"></div>
+
+      <ul class="categories">
+        {{ $firstElements := dict }}
+        {{ range $key, $pages := .Site.Taxonomies.categorias }}
+          {{ $firstElements = $firstElements | merge (dict $key $pages) }}
+          {{ if eq (len $firstElements) 5 }}{{ break }}{{ end }}
+        {{ end }}
+
+        {{ range $key, $pages := $firstElements }}
+          <li><a href='{{ printf "%s%s/" (site.GetPage "categorias").RelPermalink $key }}'>{{ $key }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+
+    <!-- Widget recent post -->
+    <div class="widget-box">
+      <h4 class="widget-title">Articulos recientes</h4>
+      <div class="divider"></div>
+
+
+      {{ range first 3 (where .Site.RegularPages "Type" "blog") }}
+      <div class="blog-item">
+        <a class="post-thumb" href="">
+          <img src="{{ relURL .Params.Image }}" alt="Post thumbnail">
+        </a>
+        <div class="content">
+          <h6 class="post-title"><a href="{{ relURL .Permalink }}">{{ .Title }}</a></h6>
+          <div class="meta">
+            <a href="#"><span class="mai-calendar"></span> {{ .Date | time.Format ":date_medium" }} </a>
+            <a href="#"><span class="mai-person"></span>{{ .Params.author }}</a>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+
+    </div>
+
+    <!-- Widget Tag Cloud -->
+    <div class="widget-box">
+      <h4 class="widget-title">Etiquetas</h4>
+      <div class="divider"></div>
+
+      <div class="tag-clouds">
+        {{ $firstElements := dict }}
+        {{ range $key, $pages := .Site.Taxonomies.etiquetas }}
+          {{ $firstElements = $firstElements | merge (dict $key $pages) }}
+          {{ if eq (len $firstElements) 8 }}{{ break }}{{ end }}
+        {{ end }}
+        
+        {{ range $key, $pages := $firstElements }}
+          <a href='{{ printf "%s%s/" (site.GetPage "etiquetas").RelPermalink $key }}' class="tag-cloud-link">{{ $key }}</a>
+        {{ end }}
+      </div>
+    </div>
+
+  </div>
+</div>

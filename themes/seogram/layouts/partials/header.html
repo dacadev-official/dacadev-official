@@ -9,9 +9,10 @@
       </button>
 
       <div class="navbar-collapse collapsed" id="navbarContent">
+        {{ $currentPage := . }}
         <ul class="navbar-nav ml-auto">
           {{ range .Site.Menus.main }}
-          <li class="nav-item"> <!-- add the active class to those current pages-->
+          <li class='nav-item {{ if eq $currentPage.RelPermalink .URL }}active{{ end }}'> <!-- add the active class to those current pages-->
             <a class="nav-link" href='{{ relURL .PageRef }}'>{{ .Name }}</a>
           </li>
           {{ end }}
