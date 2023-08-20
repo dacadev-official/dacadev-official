@@ -1,0 +1,31 @@
+<div class="page-section">
+  <div class="container">
+    <div class="text-center wow fadeInUp">
+      <div class="subhead">Proyectos</div>
+      <h2 class="title-section">Los ultimos proyectos en que he trabajado</h2>
+      <div class="divider mx-auto"></div>
+    </div>
+
+    <div class="row mt-5 justify-content-center">
+      {{ range first 3 (where (where .Site.Pages "Section" "portafolio") "IsSection" false) }}
+      <div class="col-lg-4 py-3 wow fadeInUp">
+        <div class="card-blog">
+          <div class="header">
+            <div class="post-thumb">
+              <img src='{{ relURL .Params.image }}' alt="">
+            </div>
+          </div>
+          <div class="body">
+            <h5 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h5>
+            <div class="post-date">Posted on <a href="#">{{ .Date | time.Format ":date_medium" }}</a></div>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+
+      <div class="col-12 mt-4 text-center wow fadeInUp">
+        <a href='{{ relURL "/portafolio" }}' class="btn btn-primary">Ver más</a>
+      </div>
+    </div>
+  </div>
+</div>

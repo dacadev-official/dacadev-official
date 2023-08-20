@@ -8,3 +8,11 @@ main:
 - name: Sobre Mi
   pageRef: /sobre-mi/
   weight: 10
+
+footer:
+  - name: Blog
+    pageRef: /blog/
+    weight: 10
+  - name: Portafolio
+    pageRef: /portafolio/
+    weight: 10

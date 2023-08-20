@@ -1,3 +1,79 @@
 {{ define "main" }}
-  <h1>Single page</h1>
+<div class="page-section pt-5">
+  <div class="container">
+    <nav aria-label="Breadcrumb">
+      <ul class="breadcrumb p-0 mb-0 bg-transparent wow fadeInDown">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/blog">Blog</a></li>
+        <li class="breadcrumb-item active">{{ .Title }}</li>
+      </ul>
+    </nav>
+
+    <div class="row">
+      <div class="col-lg-8 wow fadeInLeft">
+        <div class="blog-single-wrap">
+          <div class="header">
+            <div class="post-thumb">
+              <img src="{{ relURL .Params.image }}" alt="">
+            </div>
+            <div class="meta-header">
+              <div class="post-author">
+                <div class="avatar">
+                  <img src=' {{ relURL "img/person/person_1.jpg" }}' alt="Author Photo">
+                </div>
+                por <a href="#">
+                  {{ .Params.author }}
+                </a>
+              </div>
+              <div class="post-sharer">
+                <a href="#" class="btn social-facebook"><span class="mai-logo-facebook-f"></span></a>
+                <a href="#" class="btn social-twitter"><span class="mai-logo-twitter"></span></a>
+                <a href="#" class="btn social-linkedin"><span class="mai-logo-linkedin"></span></a>
+              </div>
+            </div>
+          </div>
+          <h1 class="post-title">{{ .Title }}</h1>
+          <div class="post-meta">
+            <div class="post-date">
+              <span class="icon">
+                <span class="mai-calendar"></span>
+              </span> <a href="#">{{ .Date | time.Format ":date_medium" }}</a>
+            </div>
+          </div>
+
+          <div class="tag-clouds">
+            {{ $taxonomy := "categorias" }}
+            {{ with .GetTerms $taxonomy }}
+              <a class="d-inline-block mr-2" href="{{ (site.GetPage $taxonomy).RelPermalink }}">Categorias: </a>
+              {{ range . }}
+                <a href="{{ .RelPermalink }}" class="tag-cloud-link">{{ .LinkTitle }}</a>
+              {{ end }}
+            {{ end }}
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="post-content">
+            {{ .Content }}
+          </div>
+
+          <hr>
+
+          <div class="tag-clouds">
+            {{ $taxonomy := "etiquetas" }}
+            {{ with .GetTerms $taxonomy }}
+              <a class="d-inline-block mr-2" href="{{ (site.GetPage $taxonomy).RelPermalink }}">Etiquetas: </a>
+              {{ range . }}
+                <a href="{{ .RelPermalink }}" class="tag-cloud-link">{{ .LinkTitle }}</a>
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
+      </div>
+
+      {{ partial "partials/blog/sidebar.html" . }}
+    </div>
+
+  </div>
+</div>
 {{ end }}

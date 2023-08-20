@@ -29,7 +29,7 @@
   </nav>
   
   {{ if and (or (eq .Title "Blog") (ne .Type "blog")) (ne .Title "404 Page not found" "Sobre mi") }}
-  <div class="container">
+  <div class="container wow fadeInUp">
     <div class="page-banner">
       <div class="row justify-content-center align-items-center h-100">
         <div class="col-md-6">
@@ -43,7 +43,7 @@
           </nav>
           <h1 class="text-center">
             {{ if (eq .Title "Inicio") }}
-              Blog
+              DacaDev <span class="text-primary"></></span>
             {{ else }}
               {{ .Title }}
             {{ end }}</h1>

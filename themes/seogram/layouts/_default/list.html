@@ -1,17 +1,31 @@
 {{ define "main" }}
-  {{ range .Pages }}
-  <div class="col-lg-4 py-3">
-    <div class="card-blog">
-      <div class="header">
-        <div class="post-thumb">
-          <img src='{{ relURL .Params.image }}' alt="">
+<div class="page-section wow fadeInUp">
+  <div class="container">
+    <div class="row">
+      {{ range (.Paginate .RegularPagesRecursive).Pages }}
+      <div class="col-lg-4 col-md-6 py-3">
+        <div class="card-blog">
+          <div class="header">
+            <div class="post-thumb">
+              <img src='{{ relURL .Params.image }}' alt="">
+            </div>
+          </div>
+          <div class="body">
+            <h5 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h5>
+            <div class="post-date">Publicado en <a href="#">{{ .Date | time.Format ":date_medium" }}</a></div>
+          </div>
         </div>
       </div>
-      <div class="body">
-        <h5 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h5>
-        <div class="post-date">Publicado en <a href="#">{{ .Date | time.Format ":date_medium" }}</a></div>
+      {{ end }}
+    </div>
+
+    <div class="row mt-4">
+      {{ $paginator := .Paginate .Pages }}
+      <div class="col-12 d-flex justify-content-center">
+        {{ template "_internal/pagination.html" . }}
       </div>
     </div>
+
   </div>
-  {{ end }}
+</div>
 {{ end }}
