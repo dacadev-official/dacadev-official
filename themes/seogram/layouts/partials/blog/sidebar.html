@@ -24,6 +24,9 @@
           <li><a href='{{ printf "%s%s/" (site.GetPage "categorias").RelPermalink $key }}'>{{ $key }}</a></li>
         {{ end }}
       </ul>
+      <div class="d-flex justify-content-center mt-4">
+        <a href='{{ relURL "/categorias" }}' class="btn-sm btn btn-outline-primary m-auto">Ver todo</a>
+      </div>
     </div>
 
     <!-- Widget recent post -->
@@ -64,6 +67,9 @@
         {{ range $key, $pages := $firstElements }}
           <a href='{{ printf "%s%s/" (site.GetPage "etiquetas").RelPermalink $key }}' class="tag-cloud-link">{{ $key }}</a>
         {{ end }}
+      </div>
+      <div class="d-flex justify-content-center mt-4">
+        <a href='{{ relURL "/etiquetas" }}' class="btn-sm btn btn-outline-primary m-auto">Ver todo</a>
       </div>
     </div>
 
