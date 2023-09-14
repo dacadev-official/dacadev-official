@@ -54,25 +54,6 @@
     {
       "title": "blog",
       "path": "[[workspace]]/content/blog"
-    },
-    {
-      "title": "archetypes",
-      "path": "[[workspace]]/themes/seogram/archetypes"
-    },
-    {
-      "title": "archetypes",
-      "path": "[[workspace]]/archetypes"
     }
-  ],
-  "frontMatter.taxonomy.categories": [
-    "cloud computing",
-    "backend",
-    "frontend",
-    "testing"
-  ],
-  "frontMatter.taxonomy.tags": [
-    "python",
-    "javascript",
-    "golang"
   ]
 }
