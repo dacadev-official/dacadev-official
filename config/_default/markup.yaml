@@ -1,0 +1,6 @@
+highlight:
+  lineNoStart: 1
+  lineNos: true
+  lineNumbersInTable: false
+  style: monokai
+  tabWidth: 4

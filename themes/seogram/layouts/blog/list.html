@@ -7,7 +7,7 @@
         <div class="card-blog">
           <div class="header">
             <div class="post-thumb">
-              <img src='{{ relURL .Params.image }}' alt="">
+              <img src='{{ .RelPermalink }}{{ .Params.image }}' alt=".Title">
             </div>
           </div>
           <div class="body">

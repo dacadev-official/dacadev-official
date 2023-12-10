@@ -53,7 +53,8 @@
     },
     {
       "title": "blog",
-      "path": "[[workspace]]/content/blog"
+      "path": "[[workspace]]/content/blog",
+      "previewPath": "blog"
     }
   ]
 }
