@@ -2,9 +2,9 @@
 title: "Claves para Nombrar en Código: Consejos de Código Limpio"
 description: Aprende a nombrar variables y funciones eficazmente con consejos de 'Código Limpio'. Mejora la legibilidad y mantenimiento de tu código.
 date: 2023-09-14T02:18:24.251Z
-preview: ""
-image: "img/presentation.png"
-draft: true
+preview: /content/blog/2023-09-13-código-limpio-nombres-significativos/img/presentation.png
+image: img/presentation.png
+draft: false
 tags:
   - teoría
 categories:
@@ -22,7 +22,6 @@ Te voy a compartir algunos consejos que te ayudarán a la hora de definir dichos
 ### Nombres significativos
 
 Los nombres deben transmitir claramente cuál es el propósito del código, es decir, que con el hecho de leer la variable o función, se debe entender qué contiene.
-
 
 {{< code filename="typescript.ts" >}}
 {{< highlight typescript >}}
