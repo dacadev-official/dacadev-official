@@ -3,5 +3,6 @@
   "frontMatter.content.publicFolder": "static",
   "frontMatter.preview.host": "http://localhost:1313",
   "[markdown]": {
-  }
+  },
+  "editor.defaultFormatter": null
 }

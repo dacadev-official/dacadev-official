@@ -1,14 +1,18 @@
 ---
-title: "Claves para Nombrar en Código: Consejos de Código Limpio"
+title: "Código Limpio: Buenos nombres en el código"
 description: Aprende a nombrar variables y funciones eficazmente con consejos de 'Código Limpio'. Mejora la legibilidad y mantenimiento de tu código.
 date: 2023-09-14T02:18:24.251Z
-preview: /content/blog/2023-09-13-código-limpio-nombres-significativos/img/presentation.png
-image: img/presentation.png
+preview: blog/codigo-limpio-nombres-significativos/img/presentation.png
+banner: img/presentation.png
 draft: false
 tags:
   - teoría
 categories:
   - programación
+keywords:
+  - consejos de programación
+  - nombres en el código
+  - código limpio
 ---
 
 Al momento de escribir código, una tarea difícil de la que nadie habla es el hecho de nombrar nuestras variables, funciones, clases, etc. Y si no lo sientes así, déjame contarte por qué es algo a lo que deberías prestarle atención 😉.

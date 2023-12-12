@@ -1,7 +1,13 @@
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  {{- with .Params.description -}}
+    <meta name="description" content="{{ . }}">
+  {{- end -}}
+  {{ with .Params.keywords }}
+    <meta name="keywords" content="{{ range . }}{{ . }}, {{ end }}">
+  {{ end }}
   <title>
     {{- if .Title -}}
       {{ .Title }} | {{ .Site.Title }}
@@ -9,10 +15,10 @@
       {{ .Site.Title }}
     {{- end -}}
   </title>
-  <link rel="shortcut icon" href='{{ relURL "favicon.png" }}' type="image/x-icon">
+  <link rel="shortcut icon" href='{{ relURL "favicon.png" }}' type="image/x-icon" />
 
-  <link rel="stylesheet" href='{{ relURL "/css/maicons.css" }}'>
-  <link rel="stylesheet" href='{{ relURL "/css/bootstrap.css" }}'>
-  <link rel="stylesheet" href='{{ relURL "/vendor/animate/animate.css" }}'>
-  <link rel="stylesheet" href='{{ relURL "/css/theme.css" }}'>
+  <link rel="stylesheet" href='{{ relURL "/css/maicons.css" }}' />
+  <link rel="stylesheet" href='{{ relURL "/css/bootstrap.css" }}' />
+  <link rel="stylesheet" href='{{ relURL "/vendor/animate/animate.css" }}' />
+  <link rel="stylesheet" href='{{ relURL "/css/theme.css" }}' />
 </head>

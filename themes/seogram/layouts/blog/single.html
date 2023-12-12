@@ -14,7 +14,11 @@
         <div class="blog-single-wrap">
           <div class="header">
             <div class="post-thumb">
-              <img src="{{ relURL .Params.preview }}" alt="">
+                {{ if .Params.banner }}
+                  <img src="{{ .Permalink }}{{ .Params.banner }}" alt="">
+                {{ else }}
+                  <img src='{{ relURL "img/default/blog-thumbnail-default.jpg" }}' alt="{{ .Title }}">
+                {{ end }}
             </div>
             <div class="meta-header">
               <div class="post-author">
