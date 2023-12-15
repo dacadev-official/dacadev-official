@@ -6,9 +6,9 @@
         <p>{{ .Site.Params.Description }}</p>
 
         <div class="social-media-button">
-          <a href="#"><span class="mai-logo-facebook-f"></span></a>
-          <a href="#"><span class="mai-logo-twitter"></span></a>
-          <a href="#"><span class="mai-logo-linkedin"></span></a>
+          <a href="{{ .Site.Data.authors.dacadev.instagram }}" target="blank"><span class="mai-logo-instagram"></span></a>
+          <a href="{{ .Site.Data.authors.dacadev.twitter }}" target="blank"><span class="mai-logo-twitter"></span></a>
+          <a href="{{ .Site.Data.authors.dacadev.linkedIn }}" target="blank"><span class="mai-logo-linkedin"></span></a>
         </div>
       </div>
       <div class="col-lg-4 py-3">
@@ -22,7 +22,7 @@
       <div class="col-lg-4 py-3">
         <h5>Contacto</h5>
         <ul class="footer-menu">
-          <li><a href='{{ relURL "/sobre-mi" }}' class="footer-link">Sobre mi</a></li>
+          <li><a href='{{ .Site.Data.authors.dacadev.linkedIn}}' class="footer-link">Sobre mi</a></li>
         </ul>
         <a href="#" class="footer-link">contacto@dacadev.com</a>
       </div>

@@ -10,6 +10,5 @@ tags:
   - tutorial rápido
 categories:
   - frontend
-  - programación
 image: ""
 ---

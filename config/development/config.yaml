@@ -1,1 +1,2 @@
 buildDrafts: "true"
+minify: false
