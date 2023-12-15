@@ -25,7 +25,7 @@
                 <div class="avatar">
                   <img src=' {{ relURL "img/person/person_1.jpg" }}' alt="Author Photo">
                 </div>
-                por <a href="#">
+                por <a>
                   {{ .Params.author }}
                 </a>
               </div>
@@ -46,7 +46,7 @@
           </div>
 
           <div class="tag-clouds">
-            {{ $taxonomy := "categorias" }}
+            {{ $taxonomy := "categories" }}
             {{ with .GetTerms $taxonomy }}
               <a class="d-inline-block mr-2" href="{{ (site.GetPage $taxonomy).RelPermalink }}">Categorias: </a>
               {{ range . }}
@@ -61,10 +61,10 @@
             {{ .Content }}
           </div>
 
-          <hr>
+          <hr class="my-5">
 
           <div class="tag-clouds">
-            {{ $taxonomy := "etiquetas" }}
+            {{ $taxonomy := "tags" }}
             {{ with .GetTerms $taxonomy }}
               <a class="d-inline-block mr-2" href="{{ (site.GetPage $taxonomy).RelPermalink }}">Etiquetas: </a>
               {{ range . }}

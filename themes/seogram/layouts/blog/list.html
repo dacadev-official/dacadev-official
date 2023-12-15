@@ -15,7 +15,10 @@
             </div>
           </div>
           <div class="body">
-            <h5 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h5>
+            <h5 class="post-title"><a href="{{ .Permalink }}">{{ strings.FirstUpper .Title }}</a></h5>
+            {{- if .Params.author -}}
+              <div class="post-author">Autor: <a href="#">{{ .Params.author }}</a></div>
+            {{- end -}}
             <div class="post-date">Publicado en <a href="#">{{ .Date | time.Format ":date_medium" }}</a></div>
           </div>
         </div>

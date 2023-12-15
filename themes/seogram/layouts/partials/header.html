@@ -38,14 +38,14 @@
               {{ range .Ancestors.Reverse }}
               <li class="breadcrumb-item"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
               {{ end }}
-              <li class="breadcrumb-item active"> {{ .Title }} </li>
+              <li class="breadcrumb-item active"> {{ strings.FirstUpper .Title }} </li>
             </ul>
           </nav>
           <h1 class="text-center">
             {{ if (eq .Title "Inicio") }}
               DacaDev <span class="text-primary"></></span>
             {{ else }}
-              {{ .Title }}
+              {{ strings.FirstUpper .Title }}
             {{ end }}</h1>
         </div>
       </div>

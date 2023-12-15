@@ -13,7 +13,7 @@
               <img class="taxonomy-img" src='{{ relURL "img/default/service-1.svg" }}' alt="">
             </div>
             <div class="body">
-              <h6 class="text-secondary">{{ .Title }}</h6>
+              <h6 class="text-secondary">{{ strings.FirstUpper .Title }}</h6>
               <p class="text-sm">{{ .Description }}</p>
               <a href='{{ relURL .Permalink }}' class="btn btn-sm btn-outline-primary">Más</a>
             </div>

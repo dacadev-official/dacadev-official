@@ -2,17 +2,14 @@ main:
 - name: Blog
   pageRef: /blog/
   weight: 10
-- name: Portafolio
-  pageRef: /portafolio/
-  weight: 10
 - name: Sobre Mi
-  pageRef: /sobre-mi/
+  pageRef: https://www.linkedin.com/in/dacadev/
   weight: 10
 
 footer:
   - name: Blog
     pageRef: /blog/
     weight: 10
-  - name: Portafolio
-    pageRef: /portafolio/
+  - name: Sobre Mi
+    pageRef: https://www.linkedin.com/in/dacadev/
     weight: 10

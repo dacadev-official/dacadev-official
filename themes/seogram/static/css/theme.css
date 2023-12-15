@@ -1334,8 +1334,8 @@ a.text-dark:hover, a.text-dark:focus {
 
 .page-section {
   position: relative;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   color: #898798;
   overflow: hidden;
 }

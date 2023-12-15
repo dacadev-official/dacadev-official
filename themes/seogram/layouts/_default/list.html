@@ -11,7 +11,7 @@
             </div>
           </div>
           <div class="body">
-            <h5 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h5>
+            <h5 class="post-title"><a href="{{ .Permalink }}">{{ strings.FirstUpper .Title }}</a></h5>
             <div class="post-date">Publicado en <a href="#">{{ .Date | time.Format ":date_medium" }}</a></div>
           </div>
         </div>
