@@ -21,7 +21,7 @@
         {{ end }}
 
         {{ range $key, $pages := $firstElements }}
-          <li><a href='{{ printf "%s%s/" (site.GetPage "categories").RelPermalink $key }}'>{{ $key }}</a></li>
+          <li><a href='{{ printf "%s%s/" (site.GetPage "categories").RelPermalink $key }}'>{{ strings.FirstUpper $key }}</a></li>
         {{ end }}
       </ul>
       <div class="d-flex justify-content-center mt-4">

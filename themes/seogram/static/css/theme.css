@@ -361,14 +361,14 @@ a.text-dark:hover, a.text-dark:focus {
   color: #0077B5 !important;
 }
 
-.btn.social-facebook {
-  background-color: #3B5999;
+.btn.social-instagram {
+  background-color: #C13584;
   color: #fff;
 }
 
-.btn.social-facebook:hover,
-.btn.social-facebook:focus {
-  background-color: #314e8f;
+.btn.social-instagram:hover,
+.btn.social-instagram:focus {
+  background-color: #c4257f;
   color: #fff;
 }
 
@@ -2088,7 +2088,6 @@ a.text-dark:hover, a.text-dark:focus {
   border: 3px solid #6C55F9;
   margin: 2em 1em 1em;
   position: relative;
-  border-radius: 0 0 5px 5px;
   border-radius: 5px;
 }
 
