@@ -3,7 +3,7 @@
   "frontMatter.taxonomy.contentTypes": [
     {
       "name": "default",
-      "pageBundle": false,
+      "pageBundle": true,
       "previewPath": null,
       "fields": [
         {
@@ -17,6 +17,11 @@
           "type": "string"
         },
         {
+          "title": "Keywords",
+          "name": "keywords",
+          "type": "string"
+        },
+        {
           "title": "Publishing date",
           "name": "date",
           "type": "datetime",
@@ -24,14 +29,26 @@
           "isPublishDate": true
         },
         {
+          "title": "Author",
+          "name": "author",
+          "type": "string",
+          "default": "David A. Casas"
+        },
+        {
           "title": "Content preview",
           "name": "preview",
           "type": "image"
         },
         {
+          "title": "Post Banner image",
+          "name": "image",
+          "type": "image"
+        },
+        {
           "title": "Is in draft",
           "name": "draft",
-          "type": "draft"
+          "type": "draft",
+          "default": "false"
         },
         {
           "title": "Tags",
@@ -42,24 +59,16 @@
           "title": "Categories",
           "name": "categories",
           "type": "categories"
-        },
-        {
-          "title": "image",
-          "name": "image",
-          "type": "image"
         }
       ]
     }
   ],
   "frontMatter.content.pageFolders": [
     {
-      "title": "portafolio",
-      "path": "[[workspace]]/content/portafolio"
-    },
-    {
       "title": "blog",
       "path": "[[workspace]]/content/blog",
-      "previewPath": "blog"
+      "previewPath": "blog",
+      "filePrefix": ""
     }
   ]
 }
