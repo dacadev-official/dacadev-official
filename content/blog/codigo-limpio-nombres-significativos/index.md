@@ -5,7 +5,7 @@ date: 2023-09-14T02:18:24.251Z
 author: David A. Casas
 preview: blog/codigo-limpio-nombres-significativos/img/presentation.png
 banner: img/presentation.png
-draft: false
+draft: true
 tags:
   - teoria
 categories:
