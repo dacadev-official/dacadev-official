@@ -48,7 +48,7 @@
           "title": "Is in draft",
           "name": "draft",
           "type": "draft",
-          "default": "true"
+          "default": true
         },
         {
           "title": "Tags",
