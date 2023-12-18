@@ -10,15 +10,21 @@
   {{ end }}
   <title>
     {{- if .Title -}}
-      {{ .Title }} | {{ .Site.Title }}
+      {{ strings.FirstUpper .Title }} | {{ .Site.Title }}
     {{- else -}}
       {{ .Site.Title }}
     {{- end -}}
   </title>
   <link rel="shortcut icon" href='{{ relURL "favicon.png" }}' type="image/x-icon" />
 
-  <link rel="stylesheet" href='{{ relURL "/css/maicons.css" }}' />
-  <link rel="stylesheet" href='{{ relURL "/css/bootstrap.css" }}' />
+  {{ with resources.Get "css/maicons.css" | postCSS }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{ end }}
+  {{ with resources.Get "css/bootstrap.css" | postCSS }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{ end }}
   <link rel="stylesheet" href='{{ relURL "/vendor/animate/animate.css" }}' />
-  <link rel="stylesheet" href='{{ relURL "/css/theme.css" }}' />
+  {{ with resources.Get "css/theme.css" | postCSS }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{ end }}
 </head>
