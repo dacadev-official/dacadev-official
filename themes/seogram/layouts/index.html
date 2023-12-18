@@ -8,14 +8,17 @@
           <div class="header">
             <div class="post-thumb">
               {{- if .Params.banner -}}
-                <img src='{{ relURL .Params.banner }}' alt=".Title">
+                <img src='{{ relURL .Params.banner }}' alt="{{.Title}}">
               {{- else -}}
-                <img src='{{ relURL "img/default/blog-thumbnail-default.jpg" }}' alt=".Title">
+                <img src='{{ relURL "img/default/blog-thumbnail-default.jpg" }}' alt="{{.Title}}">
               {{- end -}}
             </div>
           </div>
           <div class="body">
             <h5 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h5>
+            {{- if .Params.author -}}
+              <div class="post-author">Autor: <a href="#">{{ .Params.author }}</a></div>
+            {{- end -}}
             <div class="post-date">Publicado en <a href="#">{{ .Date | time.Format ":date_medium" }}</a></div>
           </div>
         </div>
