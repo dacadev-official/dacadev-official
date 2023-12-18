@@ -7,8 +7,8 @@
         <div class="card-blog">
           <div class="header">
             <div class="post-thumb">
-              {{- if .Params.preview -}}
-                <img src='{{ relURL .Params.preview }}' alt=".Title">
+              {{- if .Params.banner -}}
+                <img src='{{ relURL .Params.banner }}' alt=".Title">
               {{- else -}}
                 <img src='{{ relURL "img/default/blog-thumbnail-default.jpg" }}' alt=".Title">
               {{- end -}}

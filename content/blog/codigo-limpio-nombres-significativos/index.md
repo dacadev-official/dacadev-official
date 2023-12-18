@@ -3,8 +3,7 @@ title: "Código Limpio: Define buenos nombres en tu código"
 description: Aprende a nombrar variables y funciones eficazmente con consejos de 'Código Limpio'. Mejora la legibilidad y mantenimiento de tu código.
 date: 2023-09-14T02:18:24.251Z
 author: David A. Casas
-preview: blog/codigo-limpio-nombres-significativos/img/presentation.png
-banner: img/presentation.png
+banner: blog/codigo-limpio-nombres-significativos/img/banner.png
 draft: false
 tags:
   - teoria

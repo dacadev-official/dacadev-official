@@ -15,7 +15,7 @@
           <div class="header">
             <div class="post-thumb">
                 {{ if .Params.banner }}
-                  <img src="{{ .Permalink }}{{ .Params.banner }}" alt="">
+                  <img src="{{ relURL .Params.banner }}" alt="">
                 {{ else }}
                   <img src='{{ relURL "img/default/blog-thumbnail-default.jpg" }}' alt="{{ .Title }}">
                 {{ end }}

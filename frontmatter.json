@@ -36,13 +36,10 @@
         },
         {
           "title": "Content preview",
-          "name": "preview",
-          "type": "image"
-        },
-        {
-          "title": "Post Banner image",
-          "name": "image",
-          "type": "image"
+          "name": "banner",
+          "type": "image",
+          "isPreviewImage": true,
+          "required": true 
         },
         {
           "title": "Is in draft",

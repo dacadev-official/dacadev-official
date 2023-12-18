@@ -7,7 +7,11 @@
         <div class="card-blog">
           <div class="header">
             <div class="post-thumb">
-              <img src='{{ relURL .Params.image }}' alt="">
+              {{- if .Params.banner -}}
+                <img src='{{ relURL .Params.banner }}' alt=".Title">
+              {{- else -}}
+                <img src='{{ relURL "img/default/blog-thumbnail-default.jpg" }}' alt=".Title">
+              {{- end -}}
             </div>
           </div>
           <div class="body">
