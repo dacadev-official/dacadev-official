@@ -33,14 +33,14 @@ Para desplegar tu sitio web creado con **HUGO**, dispones de muchas herramientas
   {{< callout >}}
   Si quieres que el repositorio sea privado y aún así desplegar tu sitio, es importante contar con la cuenta Pro.
   {{</ callout >}}
-  ![Repositorio creado en GitHub](img/deploy-1.png)
+  {{< imageWebp src="img/deploy-1.png" alt="Repositorio creado en GitHub" >}}
   En la imagen de referencia, estoy usando la página especial de **GitHub Pages** que coincide con mi nombre de usuario, [dacadev-official](https://github.com/dacadev-official). Esto significa que cuando despliegue mi sitio, lo harán en la raíz del dominio de mi cuenta, que sería `https://dacadev-official.github.io`. Si el nombre fuera diferente, la URL sería `https://dacadev-official.github.io/<my-repo-name>`. Es importante tener esto en cuenta ya que si en **HUGO** estamos usando `Permalinks` o `relURL` sin tener configurado debidamente nuestro `baseurl`, podría generar problemas en los enlaces.
 
 2. Dentro de nuestro repositorio, nos dirigiremos a la sección de *settings > pages* y activaremos la opción de build and deploy con **GitHub Actions**.
-  ![Pasos para ir a la sección de Pages en el repositorio](img/deploy-2.png)
-  ![Activar el build & deploy a través de GitHub Actions](img/deploy-3.png)
+  {{< imageWebp src="img/deploy-2.png" alt="Pasos para ir a la sección de Pages en el repositorio" >}}
+  {{< imageWebp src="img/deploy-3.png" alt="Activar el build & deploy a través de GitHub Actions" >}}
 
-3. El siguiente paso consiste en activar las **GitHub Actions**. Para ello, debemos crear un archivo dentro del folder `.github/workflows`.
+1. El siguiente paso consiste en activar las **GitHub Actions**. Para ello, debemos crear un archivo dentro del folder `.github/workflows`.
   {{< callout >}}
   Las **GitHub Actions** son una herramienta de automatización integrada en GitHub, que permite ejecutar flujos de trabajo basados en eventos dentro de un repositorio.
   {{</ callout >}}
@@ -100,7 +100,7 @@ jobs:
         id: pages
         uses: actions/configure-pages@v4
       - name: Install Node.js dependencies
-        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+        run: "yarn install"
 				# Configura las variables de entorno de HUGO y procede a
 				# ejecutar el comando para construir el sitio.
       - name: Build with Hugo
@@ -141,7 +141,7 @@ git push origin main
   {{< /code >}}
 
 5. Nos dirigiremos a la página de nuestro repositorio y veremos que **GitHub** ha detectado automáticamente nuestros cambios con las acciones y las ejecutará. Verás algo similar a la siguiente imagen.
-   ![Pasos del workflow the GitHub](img/deploy-4.png)
+   {{< imageWebp src="image/deploy-4.png" alt="Pasos del workflow the GitHub" >}}
    Una vez que se completen los workflows correctamente, debes dirigirte a la URL del repositorio, que sería `https://<username>.github.io/<repository>`. Recuerda que si tu repositorio tiene el mismo nombre que tu usuario, puedes omitir el `<repository>`.
    {{< callout >}}
    En caso de que se genere un error o algo similar debes de revisar los logs de cada paso que enontrarás en el link de details al lado de cada uno de los pasos
@@ -155,12 +155,12 @@ En este ejemplo, hemos usado un dominio adquirido en [Namecheap](https://www.nam
 
 1. Lo primero que haremos es configurar nuestro dominio dentro de nuestro repositorio. Para ello, nos dirigiremos a settings > pages de nuevo y buscaremos la opción de Custom Domain.
 2. Dentro del input, agregamos el dominio que queremos agregar.
-   ![Configurar el dominio en el repositorio de GitHub](img/domain-0.png)
+   {{< imageWebp src="img/domain-0.png" alt="Configurar el dominio en el repositorio de GitHub" >}}
 3. El siguiente paso será configurar las direcciones IP a las cuales queremos que apunte nuestro dominio. Para ello, nos dirigiremos al panel de control de Namecheap e iremos a las opciones avanzadas de nuestro dominio.
-   ![Ingresar al panel de configuración del domino](img/domain-1.png)
-   ![Ir a la pestaña de configuración avanzada](img/domain-2.png)
+   {{< imageWebp src="img/domain-1.png" alt="Ingresar al panel de configuración del domino" >}}
+   {{< imageWebp src="img/domain-2.png" alt="Ir a la pestaña de configuración avanzada" >}}
 4. Finalmente, agregamos la siguiente configuración:
-   ![Configurar los registros para que apunten a los servidores de GitHub](img/domain-3.png)
+   {{< imageWebp src="img/domain-3.png" alt="Configurar los registros para que apunten a los servidores de GitHub" >}}
    Las URL listadas son las siguientes:
    - 185.199.108.153
    - 185.199.109.153

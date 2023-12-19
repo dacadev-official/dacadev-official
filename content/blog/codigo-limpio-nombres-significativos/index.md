@@ -105,7 +105,7 @@ Para el ejemplo anterior, podemos observar que el uso de `source` y `destination
 
 Usa nombres que sean pronunciables y que estén relacionados con el lenguaje que se esté usando al momento de escribir código. De esta manera, al leer el código no tendrás que hacer mapas mentales de los nombres. No seas como Flynt Loco.
 
-![Nombres pronunciables](img/fldsmdfrjpeg.jpeg)
+{{< imageWebp src="img/fldsmdfrjpeg.jpeg" alt="Nombres pronunciables" >}}
 
 ### Nombres faciles de buscar
 

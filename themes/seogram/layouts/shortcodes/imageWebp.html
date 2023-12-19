@@ -1,0 +1,8 @@
+{{ $altText := .Get "src" }}
+{{ with ( .Get "src" ) }}
+  {{ with $.Page.Resources.GetMatch . }}
+    {{ with .Resize (printf "%dx%d webp" .Width .Height ) }}
+      <img src="{{ .Permalink }}" alt='{{ $altText }}'>
+    {{ end }}
+  {{ end }}
+{{ end }}
