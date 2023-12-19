@@ -1,5 +1,21 @@
 <script src='{{ relURL "/js/jquery-3.5.1.min.js" }}'></script>
 <script src='{{ relURL "/js/bootstrap.bundle.min.js" }}'></script>
-<script src='{{ relURL "/js/google-maps.js" }}'></script>
-<script src='{{ relURL "/vendor/wow/wow.min.js" }}'></script>
-<script src='{{ relURL "/js/theme.js" }}'></script>
+
+{{/*  TODO: validate if is necessary add Google maps scripts  */}}
+{{/*  <script src='{{ relURL "/js/google-maps.js" }}'></script>  */}}
+
+<script src='{{ relURL "js/wow.min.js" }}'></script>
+
+{{/*  CUSTOM SCRIPTS  */}}
+{{ with resources.Get "js/theme.js" }}
+  {{ if hugo.IsDevelopment }}
+    {{ with . | js.Build }}
+      <script src="{{ .RelPermalink }}"></script>
+    {{ end }}
+  {{ else }}
+    {{ $opts := dict "minify" true }}
+    {{ with . | js.Build $opts | fingerprint }}
+      <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
+    {{ end }}
+  {{ end }}
+{{ end }}

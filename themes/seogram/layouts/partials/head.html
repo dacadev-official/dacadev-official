@@ -32,7 +32,9 @@
   {{ with resources.Get "css/bootstrap.css" | postCSS }}
     <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{ end }}
-  <link rel="stylesheet" href='{{ relURL "/vendor/animate/animate.css" }}' />
+  {{ with resources.Get "css/animate.css" | postCSS }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{ end }}
   {{ with resources.Get "css/theme.css" | postCSS }}
     <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{ end }}
