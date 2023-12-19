@@ -15,16 +15,13 @@
         <h5>Mapa del sitio</h5>
         <ul class="footer-menu">
           {{ range .Site.Menus.footer }}
-          <li><a href='{{ relURL .PageRef }}'>{{ .Name }}</a></li>
+          <li><a href='{{ relURL .PageRef }}' {{- if hasPrefix .PageRef "https" -}}target="_blank"{{- end -}}>{{ .Name }}</a></li>
           {{ end }}
         </ul>
       </div>
       <div class="col-lg-4 py-3">
         <h5>Contacto</h5>
-        <ul class="footer-menu">
-          <li><a href='{{ .Site.Data.authors.dacadev.linkedIn}}' class="footer-link">Sobre mi</a></li>
-        </ul>
-        <a href="#" class="footer-link">contacto@dacadev.com</a>
+        <a href="mailto:ise.david.casas@gmail.com" class="footer-link">ise.david.casas@gmail.com</a>
       </div>
     </div>
 
