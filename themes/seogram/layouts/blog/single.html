@@ -21,18 +21,21 @@
                   {{ end }}
                 {{ end }}
               {{ else }}
-                <img src='{{ relURL "img/default/blog-thumbnail-default.jpg" }}' alt="{{ .Title }}">
+                {{ with resources.Get "img/default/blog-banner.jpg" }}
+                  {{ with .Resize "600x300 webp" }}
+                    <img src='{{ .Permalink }}' alt="{{.Title}}">
+                  {{ end }}
+                {{ end }}
               {{- end -}}
             </div>
             <div class="meta-header">
               <div class="post-author">
                 <div class="avatar">
-                  {{ with .Resources.GetMatch "img/person/person_1.jpg" }}
+                  {{ with resources.Get "img/person/person_1.jpg" }}
                     {{ with .Resize "72x webp" }}
                     <img src='{{ .Permalink }}' alt="Author Photo">
                     {{ end }}
                   {{ end }}
-                  <img src='{{ relURL "img/person/person_1.jpg" }}' alt="Author Photo">
                 </div>
                 por <a>
                   {{ .Params.author }}

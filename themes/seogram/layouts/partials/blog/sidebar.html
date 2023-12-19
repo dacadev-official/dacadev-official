@@ -45,7 +45,11 @@
               {{ end }}
             {{ end }}
           {{- else -}}
-            <img src='{{ relURL "img/default/blog-thumbnail-default.jpg" }}' alt="{{ .Title }} image and redirect">
+            {{ with resources.Get "img/default/blog-banner.jpg" }}
+              {{ with .Resize "120x webp" }}
+                <img src='{{ .Permalink }}' alt="{{.Title}} image and redirect">
+              {{ end }}
+            {{ end }}
           {{- end -}}
         </a>
         <div class="content">

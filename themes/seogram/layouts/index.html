@@ -14,7 +14,11 @@
                   {{ end }}
                 {{ end }}
               {{- else -}}
-                <img src='{{ relURL "img/default/blog-thumbnail-default.jpg" }}' alt="{{.Title}}">
+                {{ with resources.Get "img/default/blog-banner.jpg" }}
+                  {{ with .Resize "300x200 webp" }}
+                    <img src='{{ .Permalink }}' alt="{{.Title}}">
+                  {{ end }}
+                {{ end }}
               {{- end -}}
             </div>
           </div>
