@@ -38,7 +38,15 @@
       {{ range first 3 (where .Site.RegularPages "Type" "blog") }}
       <div class="blog-item">
         <a class="post-thumb" href="">
-          <img src="{{- if .Params.banner -}}{{ relURL .Params.banner }}{{- else -}}{{ relURL "img/default/blog-thumbnail-default.jpg" }}{{- end -}}" alt="{{ .Title }} image and redirect">
+          {{- if .Params.banner -}}
+            {{ with .Resources.GetMatch .Params.banner }}
+              {{ with .Resize "120x webp" }}
+                <img src='{{ .Permalink }}' alt="{{.Title}} image and redirect">
+              {{ end }}
+            {{ end }}
+          {{- else -}}
+            <img src='{{ relURL "img/default/blog-thumbnail-default.jpg" }}' alt="{{ .Title }} image and redirect">
+          {{- end -}}
         </a>
         <div class="content">
           <h6 class="post-title"><a href="{{ relURL .Permalink }}">{{ .Title }}</a></h6>

@@ -27,10 +27,14 @@
             <div class="header">
               <div class="post-thumb">
                 {{- if .Params.banner -}}
-                <img src='{{ relURL .Params.banner }}' alt="{{.Title}}">
-              {{- else -}}
-                <img src='{{ relURL "img/default/blog-thumbnail-default.jpg" }}' alt="{{.Title}}">
-              {{- end -}}
+                  {{ with .Resources.GetMatch .Params.banner }}
+                    {{ with .Resize "300x200 webp" }}
+                      <img src='{{ .Permalink }}' alt="{{.Title}}">
+                    {{ end }}
+                  {{ end }}
+                {{- else -}}
+                  <img src='{{ relURL "img/default/blog-thumbnail-default.jpg" }}' alt="{{.Title}}">
+                {{- end -}}
               </div>
             </div>
             <div class="body">

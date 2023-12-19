@@ -7,7 +7,7 @@ keywords:
   - Despliegue
 date: 2023-12-18T20:56:15.941Z
 author: David A. Casas
-banner: blog/despliega-tu-sitio-de-hugo-en-github-pages/img/banner.png
+banner: img/banner.png
 draft: "false"
 tags:
   - hugo
