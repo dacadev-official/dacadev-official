@@ -8,7 +8,7 @@
           <div class="header">
             <div class="post-thumb">
               {{- if .Params.banner -}}
-                {{ with .Resources.GetMatch .Params.banner }}
+                {{ with .Resources.Get .Params.banner }}
                   {{ with .Resize "300x200 webp" }}
                     <img src='{{ .Permalink }}' alt="{{.Title}}">
                   {{ end }}

@@ -10,11 +10,16 @@
         <div class="col col-sm-6 col-lg-4">
           <div class="card-service wow fadeInUp d-flex flex-column flex-md-row align-items-center justify-content-around" style="gap: 1em">
             <div class="header mb-0">
-              <img class="taxonomy-img" src='{{ relURL "img/default/service-1.svg" }}' alt="">
+            {{- if .Params.banner -}}
+              {{ with resources.Get .Params.banner }}
+                {{ with .Resize "120x80 webp" }}
+                  <img class="taxonomy-img" src='{{ .Permalink }}' alt="{{ .Title }}">
+                {{ end }}
+              {{ end }}
+            {{- end -}}
             </div>
             <div class="body">
               <h6 class="text-secondary">{{ strings.FirstUpper .Title }}</h6>
-              <p class="text-sm">{{ .Description }}</p>
               <a href='{{ relURL .Permalink }}' class="btn btn-sm btn-outline-primary">Más</a>
             </div>
           </div>
