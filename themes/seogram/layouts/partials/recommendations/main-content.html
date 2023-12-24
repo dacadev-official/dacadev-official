@@ -1,0 +1,19 @@
+<div class="col-lg-6 py-3 wow fadeInLeft">
+  <div class="img-fluid py-3 text-center">
+    {{ $image := resources.Get "img/default/book-banner.jpg"}}
+    {{- if .Params.banner -}}
+      {{ $image = .Resources.Get .Params.banner }}
+    {{- end -}}
+    {{- with $image.Resize "450x webp" -}}
+      <img src="{{ .Permalink }}" alt="Imagen de referencia del libro {{ .Title }}" style="border-radius: 10px;">
+    {{- end -}}
+  </div>
+</div>
+<div class="col-lg-6 py-3 wow fadeInRight">
+  <span class="subhead">Libro</span>
+  <h2 class="title-section">{{ .Title }}</h2>
+  <div class="divider"></div>
+
+  <p>{{ .Params.resume }}</p>
+  <a href="#" class="btn btn-primary mt-3">Adquirir</a>
+</div>

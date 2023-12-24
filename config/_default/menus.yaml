@@ -2,6 +2,9 @@ main:
   - name: Blog
     pageRef: /blog/
     weight: 10
+  - name: Recomendaciones
+    pageRef: /recommendations/
+    weight: 10
   - name: Sobre Mi
     pageRef: https://www.linkedin.com/in/dacadev/
     weight: 10

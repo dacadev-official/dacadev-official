@@ -39,7 +39,7 @@
           "name": "banner",
           "type": "image",
           "isPreviewImage": true,
-          "required": true 
+          "required": true
         },
         {
           "title": "Is in draft",
@@ -64,8 +64,7 @@
     {
       "title": "blog",
       "path": "[[workspace]]/content/blog",
-      "previewPath": "blog",
-      "filePrefix": ""
+      "previewPath": "blog"
     }
   ]
 }
