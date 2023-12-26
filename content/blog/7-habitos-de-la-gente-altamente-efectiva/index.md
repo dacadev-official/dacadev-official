@@ -7,6 +7,6 @@ author: David A. Casas
 preview: ""
 image: ""
 draft: true
-tags: []
-categories: []
+etiquetas: []
+categorias: []
 ---

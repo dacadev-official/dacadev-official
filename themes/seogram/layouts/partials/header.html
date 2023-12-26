@@ -12,7 +12,7 @@
         {{ $currentPage := . }}
         <ul class="navbar-nav ml-auto">
           {{ range .Site.Menus.main }}
-          <li class='nav-item {{ if $currentPage.IsMenuCurrent .Menu . }}active{{ end }}'> <!-- add the active class to those current pages-->
+          <li class='nav-item {{- if $currentPage.IsMenuCurrent .Menu . -}}active{{- end -}}'> <!-- add the active class to those current pages-->
             <a class="nav-link" href='{{ relURL .PageRef }}' {{- if hasPrefix .PageRef "https" -}}target="_blank"{{- end -}} >{{ .Name }}</a>
           </li>
           {{ end }}

@@ -10,8 +10,8 @@
   </div>
 </div>
 <div class="col-lg-6 py-3 wow fadeInRight">
-  <span class="subhead">Libro</span>
-  <h2 class="title-section">{{ .Title }}</h2>
+  <span class="subhead">{{ default "Indefinido" .Params.recommendations }}</span>
+  {{/*  <h2 class="title-section">{{ .Title }}</h2>  */}}
   <div class="divider"></div>
 
   <p>{{ .Params.resume }}</p>

@@ -5,7 +5,7 @@ date: 2023-12-15T21:26:17.729Z
 author: "David A. Casas"
 preview: ""
 draft: true
-tags: []
-categories: []
+etiquetas: []
+categorias: []
 image: ""
 ---

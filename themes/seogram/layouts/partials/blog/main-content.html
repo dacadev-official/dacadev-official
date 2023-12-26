@@ -46,7 +46,7 @@
   </div>
 
   <div class="tag-clouds">
-    {{ $taxonomy := "categories" }}
+    {{ $taxonomy := "categorias" }}
     {{ with .GetTerms $taxonomy }}
       <a class="d-inline-block mr-2" href="{{ (site.GetPage $taxonomy).RelPermalink }}">Categorias: </a>
       {{ range . }}
@@ -64,7 +64,7 @@
   <hr class="my-5">
 
   <div class="tag-clouds">
-    {{ $taxonomy := "tags" }}
+    {{ $taxonomy := "etiquetas" }}
     {{ with .GetTerms $taxonomy }}
       <a class="d-inline-block mr-2" href="{{ (site.GetPage $taxonomy).RelPermalink }}">Etiquetas: </a>
       {{ range . }}
