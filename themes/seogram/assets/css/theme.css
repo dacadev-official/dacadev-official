@@ -2071,6 +2071,10 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 1em;
 }
 
+.post-content ul ul {
+  margin: 1em inherit;
+}
+
 .callout {
   position: relative;
   background-color: #f0eef8;
