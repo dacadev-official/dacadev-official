@@ -1,6 +1,6 @@
-baseURL: 'http://www.dacadev.com/'
-languageCode: 'es-co'
-title: 'DacaCode </>'
-theme: "seogram"
+baseURL: http://www.dacadev.com/
+languageCode: es-CO
+title: DacaCode </>
+theme: seogram
 paginate: 12
 paginatePath: pagina

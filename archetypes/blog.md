@@ -6,7 +6,7 @@ author: David A. Casas
 preview: "img/default/blog-thumbnail-default.jpg"
 banner: "img/default/blog-thumbnail-default.jpg"
 draft: true
-categories: []
-tags: []
+categorias: []
+etiquetas: []
 keywords: []
 ---
