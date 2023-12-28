@@ -1,15 +1,46 @@
 main:
-  - name: Blog
+  - identifier: blog
+    name: Blog
     pageRef: /blog/
     weight: 10
-  - name: Sobre Mi
+  - identifier: categories
+    name: Categorias
+    pageRef: /categorias/
+    parent: blog
+    weight: 1
+  - identifier: tags
+    name: Etiquetas
+    pageRef: /etiquetas/
+    parent: blog
+    weight: 2
+
+
+  - identifier: recommendations
+    name: Recomendaciones
+    pageRef: /recomendaciones/
+    weight: 20
+  - identifier: books
+    name: Libros
+    pageRef: /recomendaciones/libros
+    parent: recommendations
+    weight: 1
+  - identifier: courses
+    name: Cursos
+    pageRef: /recomendaciones/cursos
+    parent: recommendations
+    weight: 2
+
+  - identifier: about
+    name: Sobre Mi
     pageRef: https://www.linkedin.com/in/dacadev/
-    weight: 10
+    weight: 30
 
 footer:
-  - name: Blog
+  - identifier: blog
+    name: Blog
     pageRef: /blog/
     weight: 10
-  - name: Sobre Mi
+  - identifier: about
+    name: Sobre Mi
     pageRef: https://www.linkedin.com/in/dacadev/
     weight: 10

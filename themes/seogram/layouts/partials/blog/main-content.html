@@ -1,0 +1,75 @@
+<div class="blog-single-wrap">
+  <div class="header">
+    <div class="post-thumb">
+      {{- if .Params.banner -}}
+        {{ with .Resources.GetMatch .Params.banner }}
+          {{ with .Resize "600x300 webp" }}
+            <img src="{{ .RelPermalink }}" alt="{{ .Title }}">
+          {{ end }}
+        {{ end }}
+      {{ else }}
+        {{ with resources.Get "img/default/blog-banner.jpg" }}
+          {{ with .Resize "600x300 webp" }}
+            <img src='{{ .Permalink }}' alt="{{.Title}}">
+          {{ end }}
+        {{ end }}
+      {{- end -}}
+    </div>
+    <div class="meta-header">
+      <div class="post-author">
+        <div class="avatar">
+          {{ with resources.Get "img/person/person_1.jpg" }}
+            {{ with .Resize "100x webp" }}
+            <img src='{{ .Permalink }}' alt="Author Photo">
+            {{ end }}
+          {{ end }}
+        </div>
+        por <a>
+          {{ .Params.author }}
+        </a>
+      </div>
+      <div class="post-sharer">
+        <a href="{{ .Site.Data.authors.dacadev.instagram }}" class="btn social-instagram" target="blank"><span class="mai-logo-instagram"></span></a>
+        <a href="{{ .Site.Data.authors.dacadev.twitter }}" class="btn social-twitter" target="blank"><span class="mai-logo-twitter"></span></a>
+        <a href="{{ .Site.Data.authors.dacadev.linkedIn }}" class="btn social-linkedin" target="blank"><span class="mai-logo-linkedin"></span></a>
+      </div>
+    </div>
+  </div>
+  <h1 class="post-title">{{ .Title }}</h1>
+  <div class="post-meta">
+    <div class="post-date d-flex align-items-center" style="gap: .5em;">
+      <span class="icon">
+        <span class="mai-calendar"></span>
+      </span>
+      <a href="#">{{ .Date | time.Format ":date_medium" }}</a>
+    </div>
+  </div>
+
+  <div class="tag-clouds">
+    {{ $taxonomy := "categorias" }}
+    {{ with .GetTerms $taxonomy }}
+      <a class="d-inline-block mr-2" href="{{ (site.GetPage $taxonomy).RelPermalink }}">Categorias: </a>
+      {{ range . }}
+        <a href="{{ .RelPermalink }}" class="tag-cloud-link">{{ .LinkTitle }}</a>
+      {{ end }}
+    {{ end }}
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+
+  <hr class="my-5">
+
+  <div class="tag-clouds">
+    {{ $taxonomy := "etiquetas" }}
+    {{ with .GetTerms $taxonomy }}
+      <a class="d-inline-block mr-2" href="{{ (site.GetPage $taxonomy).RelPermalink }}">Etiquetas: </a>
+      {{ range . }}
+        <a href="{{ .RelPermalink }}" class="tag-cloud-link">{{ .LinkTitle }}</a>
+      {{ end }}
+    {{ end }}
+  </div>
+</div>

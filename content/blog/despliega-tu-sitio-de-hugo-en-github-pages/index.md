@@ -9,11 +9,11 @@ date: 2023-12-18T20:56:15.941Z
 author: David A. Casas
 banner: img/banner.png
 draft: "false"
-tags:
+etiquetas:
   - hugo
   - tutorial rápido
   - github
-categories:
+categorias:
   - programacion
 ---
 
