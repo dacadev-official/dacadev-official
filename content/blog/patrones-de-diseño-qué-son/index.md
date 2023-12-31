@@ -16,9 +16,9 @@ date: 2023-12-27T00:29:10.984Z
 author: David A. Casas
 banner: img/banner.png
 draft: false
-tags:
+etiquetas:
   - teoria
-categories:
+categorias:
   - programacion
 ---
 
