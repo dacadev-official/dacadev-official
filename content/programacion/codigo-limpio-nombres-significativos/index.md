@@ -1,5 +1,5 @@
 ---
-title: "Código Limpio: Define buenos nombres en tu código"
+title: "Código Limpio: Escribe nombres significativos"
 description: Aprende a nombrar variables y funciones eficazmente con consejos de 'Código Limpio'. Mejora la legibilidad y mantenimiento de tu código.
 date: 2023-09-14T02:18:24.251Z
 author: David A. Casas

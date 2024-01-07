@@ -2,8 +2,7 @@
   "frontMatter.framework.id": "hugo",
   "frontMatter.content.publicFolder": "static",
   "frontMatter.preview.host": "http://localhost:1313",
-  "[markdown]": {
-  },
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": true
+  "[markdown]": {},
+  "editor.formatOnSave": false,
+  "editor.formatOnPaste": false
 }

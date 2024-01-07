@@ -1,34 +1,34 @@
 <head>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1864290018848478"
-     crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   {{- with .Params.description -}}
-    <meta name="description" content="{{ . }}">
+  <meta name="description" content="{{ . }}">
   {{- end -}}
   {{ with .Params.keywords }}
-    <meta name="keywords" content="{{ range . }}{{ . }}, {{ end }}">
+  <meta name="keywords" content="{{ range . }}{{ . }}, {{ end }}">
   {{ end }}
   <title>
     {{- if .Title -}}
-      {{ strings.FirstUpper .Title }} | {{ .Site.Title }}
+    {{ strings.FirstUpper .Title }} | {{ .Site.Title }}
     {{- else -}}
-      {{ .Site.Title }}
+    {{ .Site.Title }}
     {{- end -}}
   </title>
   <link rel="shortcut icon" href='{{ relURL "favicon.png" }}' type="image/x-icon" />
 
   {{ with resources.Get "css/maicons.css" | postCSS }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{ end }}
   {{ with resources.Get "css/bootstrap.css" | postCSS }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{ end }}
   {{ with resources.Get "css/animate.css" | postCSS }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{ end }}
   {{ with resources.Get "css/theme.css" | postCSS }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{ end }}
 </head>
