@@ -2,30 +2,30 @@
 <div class="page-section py-2 pb-5">
   <div class="container wow fadeInUp">
     <div class="row my-3">
-      {{ range first 6 (where (where .Site.Pages "Section" "blog") "IsSection" false) }}
+      {{ range (.Paginate .RegularPagesRecursive).Pages }}
       <div class="col-lg-4 col-md-6 py-3">
         <div class="card-blog">
           <div class="header">
             <div class="post-thumb">
               {{- if .Params.banner -}}
-                {{ with .Resources.GetMatch .Params.banner }}
-                  {{ with .Resize "300x200 webp" }}
-                    <img src='{{ .Permalink }}' alt="{{.Title}}">
-                  {{ end }}
-                {{ end }}
+              {{ with .Resources.GetMatch .Params.banner }}
+              {{ with .Resize "300x200 webp" }}
+              <img src='{{ .Permalink }}' alt="{{.Title}}">
+              {{ end }}
+              {{ end }}
               {{- else -}}
-                {{ with resources.Get "img/default/blog-banner.jpg" }}
-                  {{ with .Resize "300x200 webp" }}
-                    <img src='{{ .Permalink }}' alt="{{.Title}}">
-                  {{ end }}
-                {{ end }}
+              {{ with resources.Get "img/default/blog-banner.jpg" }}
+              {{ with .Resize "300x200 webp" }}
+              <img src='{{ .Permalink }}' alt="{{.Title}}">
+              {{ end }}
+              {{ end }}
               {{- end -}}
             </div>
           </div>
           <div class="body">
             <h5 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h5>
             {{- if .Params.author -}}
-              <div class="post-author">Autor: <a href="#">{{ .Params.author }}</a></div>
+            <div class="post-author">Autor: <a href="#">{{ .Params.author }}</a></div>
             {{- end -}}
             <div class="post-date">Publicado en <a href="#">{{ .Date | time.Format ":date_medium" }}</a></div>
           </div>
@@ -34,9 +34,10 @@
       {{ end }}
     </div>
 
-    <div class="row">
-      <div class="col d-flex justify-content-center">
-        <a href='{{ relURL "/blog" }}' class="btn btn-primary">Ver más</a>
+    <div class="row mt-4">
+      {{ $paginator := .Paginate .Pages }}
+      <div class="col-12 d-flex justify-content-center">
+        {{ template "_internal/pagination.html" . }}
       </div>
     </div>
   </div>

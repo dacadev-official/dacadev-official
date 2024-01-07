@@ -11,6 +11,7 @@ date: 2023-12-28T01:25:17.853Z
 author: David A. Casas
 banner: "img/banner.png"
 draft: false
+type: blog
 etiquetas:
   - teoria
 categorias:

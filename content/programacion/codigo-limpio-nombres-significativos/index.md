@@ -5,6 +5,7 @@ date: 2023-09-14T02:18:24.251Z
 author: David A. Casas
 banner: img/banner.png
 draft: false
+type: blog
 etiquetas:
   - teoria
 categorias:

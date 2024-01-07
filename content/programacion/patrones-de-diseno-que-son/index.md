@@ -16,6 +16,7 @@ date: 2023-12-27T00:29:10.984Z
 author: David A. Casas
 banner: img/banner.png
 draft: false
+type: blog
 etiquetas:
   - teoria
 categorias:
@@ -50,7 +51,7 @@ Los patrones de diseño se dividen en tres categorías principales:
   - Observer
   - Mediator
   - Iterator
-  - Strategy
+  - Strategy [[**más info**](/blog/patrones-de-diseño-estrategia)]
   - Command
   - State
   - Visitor.

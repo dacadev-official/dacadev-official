@@ -4,5 +4,6 @@
   "frontMatter.preview.host": "http://localhost:1313",
   "[markdown]": {
   },
-  "editor.defaultFormatter": null
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true
 }

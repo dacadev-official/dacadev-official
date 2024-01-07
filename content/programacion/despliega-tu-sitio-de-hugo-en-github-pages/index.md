@@ -9,9 +9,10 @@ date: 2023-12-18T20:56:15.941Z
 author: David A. Casas
 banner: img/banner.png
 draft: "false"
+type: blog
 etiquetas:
   - hugo
-  - tutorial rápido
+  - tutorial
   - github
 categorias:
   - programacion
