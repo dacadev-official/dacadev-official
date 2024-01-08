@@ -14,6 +14,7 @@ draft: false
 type: blog
 etiquetas:
   - teoria
+  - patrones de diseño
 categorias:
   - programacion
 ---

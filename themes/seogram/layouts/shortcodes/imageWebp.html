@@ -1,8 +1,9 @@
-{{ $altText := .Get "src" }}
+{{ $altText := .Get "alt" }}
+{{ $width := .Get "width" }}
 {{ with ( .Get "src" ) }}
   {{ with $.Page.Resources.GetMatch . }}
     {{ with .Resize (printf "%dx%d webp" .Width .Height ) }}
-      <img src="{{ .Permalink }}" alt='{{ $altText }}'>
+      <img src="{{ .Permalink }}" alt='{{ default $altText "Imagen guia del contenido de la página" }}' {{- with $width -}}style="width:{{ . }}"{{- end -}}>
     {{ end }}
   {{ end }}
 {{ end }}

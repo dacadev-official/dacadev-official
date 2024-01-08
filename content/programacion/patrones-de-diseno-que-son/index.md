@@ -19,6 +19,7 @@ draft: false
 type: blog
 etiquetas:
   - teoria
+  - patrones de diseño
 categorias:
   - programacion
 ---
@@ -48,10 +49,10 @@ Los patrones de diseño se dividen en tres categorías principales:
   - Flyweight
   - Proxy.
 - **Patrones de Comportamiento:** Estos patrones se centran en la comunicación entre objetos. Son útiles para definir patrones de comunicación entre clases y objetos, haciéndolos más flexibles y eficientes. Encontraremos patrones como:
-  - Observer
+  - Observer [[**más info**](/programacion/patrones-de-diseno-observer)]
   - Mediator
   - Iterator
-  - Strategy [[**más info**](/blog/patrones-de-diseño-estrategia)]
+  - Strategy [[**más info**](/programacion/patrones-de-diseno-estrategia)]
   - Command
   - State
   - Visitor.

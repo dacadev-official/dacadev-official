@@ -60,11 +60,5 @@
       ]
     }
   ],
-  "frontMatter.content.pageFolders": [
-    {
-      "title": "blog",
-      "path": "[[workspace]]/content/blog",
-      "previewPath": "blog"
-    }
-  ]
+  "frontMatter.content.pageFolders": []
 }
